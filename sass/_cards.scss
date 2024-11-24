@@ -1,0 +1,77 @@
+@import "./base";
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    font-size: 1.8rem;
+    color: $color-white-transparent;
+    margin: 5rem 0;
+    @include responsive(tab-land){
+        flex-wrap: wrap;
+    }
+    
+    &-item{
+        padding: 2rem;
+        margin: 0 2.5rem;
+        display: flex;
+        align-items: center;
+        width: 40rem;
+        height:25rem;
+        border-radius: $button-border-radius;
+        cursor: pointer;
+        transition: all .2s;
+        @include responsive(tab-land){
+            margin: 2rem;
+        }
+        @include responsive(phone){
+            flex-basis: 75% !important;
+        }
+        &-1{
+            background-color: $color-accent;
+            @include responsive(tab-land){
+                flex-basis: 45%;
+            }
+        }
+        &-2{
+            background-color: $color-secondary-light;
+            @include responsive(tab-land){
+                flex-basis: 45%;
+            }
+        }
+        &-3{
+            background-color: $color-secondary;
+            @include responsive(tab-land){
+                flex-basis: 45%;
+            }
+        }
+        &-4{
+            background-color: $color-primary-light;
+            @include responsive(tab-land){
+                flex-basis: 45%;
+            }
+        }
+        &:hover{
+            transform: translateY(.5rem) scale(1.1);
+            color: $color-white;
+        }
+    }
+    &-header{
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+    &-desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        margin-top: 3rem;
+    }
+    &-icon{
+        font-size: 7rem;
+        margin-right: 3rem;
+    }
+}

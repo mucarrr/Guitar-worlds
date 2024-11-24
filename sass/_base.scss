@@ -1,0 +1,56 @@
+@import "./mediaQueries";
+
+$color-primary: #0e1111;
+$color-secondary: #353839;
+$color-text: #333;
+$color-white: #fff;
+$color-white-transparent: rgba($color-white, .8);
+$color-primary-light: #232b2b;
+$color-secondary-light:#3b444b;
+$color-accent:#414a4c;
+
+
+
+$font-primary: Lato, sans-serif;
+
+$button-border-radius: .5rem;
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;  
+}
+
+::selection{
+    color: #000;
+    background-color: $color-white;
+    }
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    @include responsive(tab-land){
+        font-size: 56.25%;
+    }
+    @include responsive(tab-port){
+        font-size: 50%;
+    }
+    @include responsive(phone){
+        font-size: 43.75%;
+    }
+    @include responsive(big-desktop){
+        font-size: 75%;
+    }
+    
+
+}
+body{
+    font-family: $font-primary;
+    color: $color-text;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: $color-primary;
+}
